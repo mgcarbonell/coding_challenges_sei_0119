@@ -28,10 +28,10 @@ const sockMerchant = (n, arr) => {
 
   // set up a loop, but we need to compare each item against
   // each other, so we need to stop at the LAST index.
-  for (let i = 0; i < i - n; i++){
+  for (let i = 0; i < n - 1; i++){
     // now we actually compare each item of the array 
     // with its direct sibling.
-    if(sorted[i] === sorted[i - 1]){
+    if(sorted[i] === sorted[i + 1]){
       // if a match: increase pairs.
       pairs++;
       // increment i by 1 since we've already checked it
@@ -41,3 +41,8 @@ const sockMerchant = (n, arr) => {
   // return our pairs.
   return pairs;
 }
+
+const n = 7
+const arr = [1, 2, 1, 2, 1, 3, 2]
+
+console.log(sockMerchant(n, arr))
