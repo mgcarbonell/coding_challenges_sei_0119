@@ -34,4 +34,4 @@ const towerOfHanoi = (disk, start, destination, staging) => {
   }
 }
 
-console.log(towerOfHanoi(3, "A", "C", "B"))
+console.log(towerOfHanoi(16, "A", "C", "B"))
