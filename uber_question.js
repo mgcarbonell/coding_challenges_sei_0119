@@ -106,7 +106,7 @@ const traverseRight = (cur, res) => {
   return res
 }
 
-const counterClockwiseTraversal = (tree) => {
+const counterClockwiseTraversal = (tree){
 
   let result = []
 
