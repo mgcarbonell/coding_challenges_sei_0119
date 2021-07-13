@@ -140,4 +140,4 @@ const counterClockwiseTraversal = (tree){
 console.log(counterClockwiseTraversal(tree))
 
 
-// Thank you to OutCo and Uber for the question!
+// Thank you to Uber for the question!
