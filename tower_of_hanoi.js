@@ -22,6 +22,7 @@
 // Recursive algorithms try to find subproblems and then express
 // the solution for the original problem (disk) in terms of the
 // solutions to the subproblems.
+// 2^n-1
 const towerOfHanoi = (disk, start, destination, staging) => {
   if (disk >= 1){
     // Move a tower of disk -1 to our staging pole, using our destination
@@ -34,4 +35,4 @@ const towerOfHanoi = (disk, start, destination, staging) => {
   }
 }
 
-console.log(towerOfHanoi(16, "A", "C", "B"))
+console.log(towerOfHanoi(3, "A", "C", "B"))

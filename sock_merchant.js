@@ -17,13 +17,13 @@
 * int n: the number of socks in the pile                   *
 * int ar[n]: the colors of each sock.                      *
 ************************************************************/
-
+console.time("Time this")
 // One way to solve is to sort the array:
-const sockMerchant = (n, arr) => {
+const sockMerchant = (n, ar) => {
   // we create a variable to hold our pairs.
   let pairs = 0
   // and then we sort the array.
-  let sorted = arr.sort((a,b) => a - b)
+  let sorted = ar.sort((a,b) => a - b)
   // console.log(arr, pairs)
   // => a sorted array pairs = 0
 
@@ -42,9 +42,24 @@ const sockMerchant = (n, arr) => {
   // return our pairs.
   return pairs;
 }
+//   let pairs = 0
+//   let sortByColor = {}
+//   for (let i = 0; i < n; i++){
+//     let pizza = arr[i]
+//     if (!sortByColor[pizza]){
+//       sortByColor[pizza] = 1
+//     } else {
+//       sortByColor[pizza] = sortByColor[pizza] + 1
+//     }
+//   }
+
+//   for (key in sortByColor){
+//     pairs = pairs + Math.floor(sortByColor[key]/2)
+//   }
+// }
 
 const n = 7
-const arr = [1, 2, 1, 2, 1, 3, 2]
+const ar = [1, 2, 1, 2, 1, 3, 2]
 
-console.log(sockMerchant(n, arr))
-
+console.log(sockMerchant(n, ar))
+console.timeEnd("Time this")
