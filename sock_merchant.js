@@ -43,8 +43,37 @@ const sockMerchant = (n, arr) => {
   return pairs;
 }
 
+// Method using an Object to track our pairs
+
+function sockMerchantObj(n, ar) {
+    // Write your code here
+    // var
+    let pairs = 0;
+    // we're going to use a hash (map)
+    // for the sake of simplicity it will just be an object
+    let sortByColor = {};
+    // let sorted = ar.sort((a, b) => a - b)
+    //logic
+    for (let i = 0; i < n; i++) {
+        let idx = ar[i]
+        if (!sortByColor[idx]) {
+            sortByColor[idx] = 1;
+        } else {
+            sortByColor[idx] = sortByColor[idx] + 1;
+        }
+    }
+    
+    for (let key in sortByColor) {
+        let i = Math.floor(sortByColor[key] / 2)
+        pairs = pairs + i
+    }
+    // return
+    return pairs;
+}
+
 const n = 7
 const arr = [1, 2, 1, 2, 1, 3, 2]
 
-console.log(sockMerchant(n, arr))
+console.log(sockMerchant(n, arr));
+console.log(sockMerchantObj(n, arr));
 
